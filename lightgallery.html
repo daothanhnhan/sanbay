@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Slick slider + lightgallery </title>
+  
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.4/css/lg-fb-comment-box.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.4/css/lg-transitions.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.4/css/lightgallery.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.4/fonts/lg.eot'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.4/fonts/lg.svg'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.4/fonts/lg.ttf'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.4/fonts/lg.woff'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.4/img/loading.gif'>
+
+
+<style>
+.item-slick.slick-slide.slick-current.slick-active {
+  outline: none !important;
+}
+
+.slider-for {
+  margin-bottom: 15px;
+}
+.slider-for img {
+  width: 100%;
+  min-height: 100%;
+}
+
+.slider-nav {
+  margin: auto;
+}
+
+.slider-nav .item-slick {
+  max-width: 240px;
+  margin-right: 15px;
+  outline: none !important;
+  cursor: pointer;
+}
+.slider-nav .item-slick img {
+  max-width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 50;
+  margin-top: -12px;
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+  right: 0;
+}
+
+</style>
+
+  
+</head>
+
+<body>
+
+  <div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+
+			<div id="aniimated-thumbnials" class="slider-for">
+
+
+					<a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg">
+						<img src="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg" />
+					</a>
+					<a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg">
+						<img src="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg" />
+					</a>
+					<a href="http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_b.jpg">
+						<img src="http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_b.jpg" />
+					</a>
+					<a href="http://farm9.staticflickr.com/8383/8563475581_df05e9906d_b.jpg">
+						<img src="http://farm9.staticflickr.com/8383/8563475581_df05e9906d_b.jpg" />
+					</a>
+
+			</div>
+			<div class="slider-nav">
+				<div class="item-slick">
+					<img src="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg" alt="Alt">
+				</div>
+				<div class="item-slick">
+					<img src="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg" alt="Alt">
+				</div>
+				<div class="item-slick">
+					<img src="http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_b.jpg" alt="Alt">
+				</div>
+				<div class="item-slick">
+					<img src="http://farm9.staticflickr.com/8383/8563475581_df05e9906d_b.jpg" alt="Alt">
+				</div>
+			</div>
+
+		</div>
+		
+
+	</div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.4/js/lightgallery-all.min.js'></script>
+
+<script>
+	$(function() {
+  
+  $('#aniimated-thumbnials').lightGallery({
+    thumbnail: true,
+  });
+// Card's slider
+  var $carousel = $('.slider-for');
+
+  $carousel
+    .slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      adaptiveHeight: true,
+      asNavFor: '.slider-nav'
+    });
+  $('.slider-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: false,
+    centerMode: false,
+    focusOnSelect: true,
+    variableWidth: true
+  });
+
+
+});
+</script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+.gb-introvechungtoi_ruouvang{
+  padding:50px 0;
+  background: rgba(241, 241, 241, 0.5);
+  h2{
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  .gb-divider {
+    border-color: $color-main1-ruouvang;
+    margin: 15px 0;
+  }
+  .gb-introvechungtoi_ruouvang-left{
+    p{
+      font-size: 14px;
+      line-height: 24px;
+    }
+    .gb-introvechungtoi_ruouvang-doctiep{
+      display: block;
+      color: $color-main-ruouvang;
+      text-align: right;
+      &:hover{
+        color: $color-main1-ruouvang;
+        background:  transparent;
+      }
+    }
+  }
+  .gb-introvechungtoi_ruouvang-right{
+    img{
+      width: 100%;
+      height:  auto;
+    }
+  }
+}
